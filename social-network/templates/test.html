@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+  </head>
+
+  <body>
+    <h1>{{ heading }}</h1>
+
+    {% if names %}
+    <ul>
+      {% for name in names %}
+      <li>{{ name}}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+
+    <p>No names found!</p>
+    {% endif %}
+
+    <img src="{{ url_for('static', filename='cow-test.jpg') }}" alt="cow-img" />
+  </body>
+</html>
